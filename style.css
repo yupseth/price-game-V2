@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  /* position: relative; */
   display: flex;
   height: 100vh;
   width: 100%;
@@ -98,8 +99,27 @@ body {
     height 1000ms;
 }
 
+/* GAME DISPLAY */
+.game-display {
+  /* position: absolute; */
+  /* height: 90vh;
+  width: 90%; */
+  height: 90vh;
+  width: 90%;
+  transition: width 600ms ease-out 400ms, height 600ms ease-out 400ms;
+  background-color: #d5d7e8;
+  -webkit-box-shadow: 0 0 40px rgb(228, 50, 127);
+  -moz-box-shadow: 0 0 40px rgb(228, 50, 127);
+  box-shadow: 0 0 40px rgb(228, 50, 127);
+  border-radius: 3%;
+}
+
+.game-display.hidden {
+  height: 0;
+}
+
 /* FOR DESKTOP */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-aspect-ratio: 4/3) {
   .button--front {
     transform: translateY(-4px);
   }
@@ -118,5 +138,11 @@ body {
   .button--start:active .button--shadow {
     transform: translateY(1px);
     transition: transform 34ms;
+  }
+
+  .game-display {
+    /* height: 90vh;
+    width: 60%; */
+    width: clamp(60%, 60%, 90%);
   }
 }
