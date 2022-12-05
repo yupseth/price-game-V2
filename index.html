@@ -5,16 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Price Game 💸</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="radioButtonsStyle.css" />
   </head>
   <body>
-    <button class="button button--start" role="button">
-      <span class="button--shadow"></span>
-      <span class="button--edge"></span>
-      <span class="button--front">start 💸</span>
-    </button>
+    <section class="greeting-area">
+      <h2>🎉 PLACEHOLDER 🎉</h2>
+      <p>This is your one true general-knlowledge nemesis. Behold! 🔮</p>
+    </section>
+    <div class="configuration-display">
+      <div class="difficulty-radio-group">
+        <input type="radio" id="easy" name="difficulty" value="EASY" />
+        <label for="easy">easy</label>
 
+        <input type="radio" id="medium" name="difficulty" value="MEDIUM" />
+        <label for="medium">medium</label>
+
+        <input type="radio" id="hard" name="difficulty" value="HARD" />
+        <label for="hard">hard</label>
+      </div>
+
+      <button class="button button--start" role="button">
+        <span class="button--shadow"></span>
+        <span class="button--edge"></span>
+        <span class="button--front">start</span>
+      </button>
+    </div>
     <div class="game-display hidden"></div>
+    <footer>
+      © Yupseth 2022. Powered by
+      <a href="https://opentdb.com/">OpenTDB</a>
+    </footer>
   </body>
 </html>

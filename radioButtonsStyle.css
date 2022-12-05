@@ -1,0 +1,59 @@
+/* CSS */
+
+.difficulty-radio-group label {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 32px;
+  width: 62px;
+  letter-spacing: 0.25px;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  will-change: transform, opacity;
+  opacity: 0.8;
+
+  margin: 0 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.difficulty-radio-group label:hover {
+  /* background: #f6f9fe;
+  color: #4fb32d; */
+  /* box-shadow: 0 0 15px rgb(228, 50, 127); */
+  opacity: 1;
+  transition: opacity 600ms;
+}
+
+.difficulty-radio-group input[type="radio"]:checked + label {
+  opacity: 1;
+}
+
+.difficulty-radio-group input[type="radio"]:checked + label[for="easy"] {
+  background-color: rgb(134, 229, 126);
+  box-shadow: 0 0 15px rgb(153, 241, 145);
+}
+
+.difficulty-radio-group input[type="radio"]:checked + label[for="medium"] {
+  background-color: rgb(255, 153, 0);
+  box-shadow: 0 0 15px rgb(238, 138, 80);
+}
+
+.difficulty-radio-group input[type="radio"]:checked + label[for="hard"] {
+  background-color: hsl(345deg 100% 47%);
+  box-shadow: 0 0 15px rgb(245, 27, 82);
+}
