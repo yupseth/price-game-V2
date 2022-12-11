@@ -3,11 +3,22 @@
 const startButton = document.querySelector(".button--start");
 const gameDisplay = document.querySelector(".game-display");
 const dropdown = document.querySelector("select");
+const configurationDisplay = document.querySelector(".configuration-display");
+const greetingArea = document.querySelector(".greeting-area");
+const questionArea = document.querySelector(".question-area");
+const answerArea = document.querySelector(".answer-area");
+const questionAnswerWrapper = document.querySelector(
+  ".question-answer-wrapper"
+);
 
 // HELPER FUNCTIONS
 const toggleHidden = function () {
   this.classList.toggle("hidden");
   gameDisplay.classList.remove("hidden");
+  questionAnswerWrapper.classList.remove("hidden");
+
+  configurationDisplay.classList.add("hidden");
+  greetingArea.classList.add("hidden");
 };
 // CATEGORY DROPDOWN
 let categories = [];
@@ -32,3 +43,5 @@ fetch(
 
 // EVENTS
 startButton.addEventListener("click", toggleHidden);
+
+////// fa sa dispara chestiile de pe pagina de start dupa ce apesi butonul

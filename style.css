@@ -29,6 +29,43 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 20px;
+  width: 280px;
+  text-align: center;
+  gap: 10px;
+}
+
+.question-area {
+  background-color: #4a4e69;
+  height: 40%;
+  width: 100%;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  overflow: hidden;
+}
+.answer-area {
+  background-color: #22223b;
+  height: 60%;
+  width: 100%;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  overflow: hidden;
+}
+.question-answer-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  width: 90%;
+  transition: width 600ms ease-out 400ms, height 600ms ease-out 400ms;
+  background-color: #d5d7e8;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  gap: 6px;
+  overflow: hidden;
+}
+.question-answer-wrapper.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
 }
 
 footer {
@@ -46,12 +83,29 @@ a {
   flex-direction: column;
   gap: 40px;
   user-select: none;
+  width: 280px;
+}
+
+select {
+  width: 100%;
+  text-align-last: center;
+  font-size: medium;
+  opacity: 0.8;
+}
+
+.configuration-display.hidden,
+.greeting-area.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
 }
 
 .difficulty-radio-group {
+  padding-right: 12px;
   width: 100%;
   display: flex;
-  justify-content: left;
+  justify-content: space-evenly;
+  gap: 6px;
 }
 
 .difficulty-radio-group input[type="radio"] {
@@ -147,6 +201,10 @@ a {
   /* position: absolute; */
   /* height: 90vh;
   width: 90%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 90vh;
   width: 90%;
   transition: width 600ms ease-out 400ms, height 600ms ease-out 400ms;
@@ -154,7 +212,7 @@ a {
   -webkit-box-shadow: 0 0 40px rgb(228, 50, 127);
   -moz-box-shadow: 0 0 40px rgb(228, 50, 127);
   box-shadow: 0 0 40px rgb(228, 50, 127);
-  border-radius: 3%;
+  border-radius: 20px;
 }
 
 .game-display.hidden {
